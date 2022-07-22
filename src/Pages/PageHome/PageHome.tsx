@@ -110,7 +110,7 @@ const Slider = ({ items }: { items: any[] }) => {
   );
 };
 
-const SliderItem = ({ item, focus }) => (
+const SliderItem = ({ item, focus }: any) => (
   <div
     className={`${styles["SliderItem"]}${focus ? ` ${styles["focus"]}` : ""}`}
   >
