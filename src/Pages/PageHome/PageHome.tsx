@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight, CaretLeft, CaretRight } from "phosphor-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./PageHome.module.scss";
 
 export const PageHome = () => {
@@ -15,6 +15,7 @@ export const PageHome = () => {
     { id: 8 },
     { id: 9 },
     { id: 10 },
+    { id: 11 },
   ];
 
   return (
@@ -49,8 +50,6 @@ const Slider = ({ items }: { items: any[] }) => {
   const scrollToIndex = (index: number) => {
     if (!scrollerRef.current) return;
 
-    console.log("Scroll to ", index);
-
     const elements = Array.from<HTMLDivElement>(
       scrollerRef.current.querySelectorAll(`.${styles["SliderItem"]}`)
     );
@@ -62,8 +61,6 @@ const Slider = ({ items }: { items: any[] }) => {
     });
   };
 
-  const scrollOffset = 3;
-
   const getScrollOffset = () => {
     if (window.innerWidth < 250 * 3) return 1;
     if (window.innerWidth < 250 * 4) return 2;
@@ -71,13 +68,42 @@ const Slider = ({ items }: { items: any[] }) => {
     return 3;
   };
 
+  const handleScroll = () => {
+    if (!scrollerRef.current) return;
+
+    const elements = Array.from<HTMLDivElement>(
+      scrollerRef.current.querySelectorAll(`.${styles["SliderItem"]}`)
+    );
+
+    const leftLine = Math.max(0, (window.innerWidth - 1000) / 2);
+
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+
+      if (element.getBoundingClientRect().left >= leftLine) {
+        setCurrentIndex(i);
+        return;
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (!scrollerRef.current) return;
+    scrollerRef.current.addEventListener("scroll", handleScroll);
+
+    return () => {
+      if (!scrollerRef.current) return;
+      scrollerRef.current.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles["Slider"]}>
       <div className={styles["control"]}>
         <button
+          className={currentIndex === 0 ? styles["disabled"] : ""}
           onClick={() => {
             const index = Math.max(0, currentIndex - getScrollOffset());
-            setCurrentIndex(index);
             scrollToIndex(index);
           }}
         >
@@ -85,12 +111,14 @@ const Slider = ({ items }: { items: any[] }) => {
         </button>
 
         <button
+          className={
+            currentIndex === items.length - 1 ? styles["disabled"] : ""
+          }
           onClick={() => {
             const index = Math.min(
               currentIndex + getScrollOffset(),
               items.length - 1
             );
-            setCurrentIndex(index);
             scrollToIndex(index);
           }}
         >
@@ -108,8 +136,8 @@ const Slider = ({ items }: { items: any[] }) => {
             />
           ))}
 
-          <div>
-            <div style={{ width: "100vw" }}></div>
+          <div className={styles["filler"]}>
+            <div></div>
           </div>
         </div>
       </div>
@@ -118,9 +146,7 @@ const Slider = ({ items }: { items: any[] }) => {
 };
 
 const SliderItem = ({ item, focus }: any) => (
-  <div
-    className={`${styles["SliderItem"]}${focus ? ` ${styles["focus"]}` : ""}`}
-  >
+  <div className={styles["SliderItem"]}>
     <div
       style={{
         backgroundImage: "",
