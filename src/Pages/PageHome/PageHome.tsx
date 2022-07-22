@@ -64,12 +64,19 @@ const Slider = ({ items }: { items: any[] }) => {
 
   const scrollOffset = 3;
 
+  const getScrollOffset = () => {
+    if (window.innerWidth < 250 * 3) return 1;
+    if (window.innerWidth < 250 * 4) return 2;
+
+    return 3;
+  };
+
   return (
     <div className={styles["Slider"]}>
       <div className={styles["control"]}>
         <button
           onClick={() => {
-            const index = Math.max(0, currentIndex - scrollOffset);
+            const index = Math.max(0, currentIndex - getScrollOffset());
             setCurrentIndex(index);
             scrollToIndex(index);
           }}
@@ -80,7 +87,7 @@ const Slider = ({ items }: { items: any[] }) => {
         <button
           onClick={() => {
             const index = Math.min(
-              currentIndex + scrollOffset,
+              currentIndex + getScrollOffset(),
               items.length - 1
             );
             setCurrentIndex(index);
