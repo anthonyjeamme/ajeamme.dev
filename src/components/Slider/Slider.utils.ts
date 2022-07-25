@@ -18,10 +18,14 @@ const scrollToIndex = (
 };
 
 const getResponsiveScrollOffset = () => {
-  if (window.innerWidth < 250 * 3.2) return 1;
-  if (window.innerWidth < 250 * 4.2) return 2;
+  const itemWidth = window.innerWidth < 768 ? 320 : 420;
 
-  return 3;
+  const widthAvailable =
+    window.innerWidth < 1000
+      ? window.innerWidth
+      : (window.innerWidth - 1000) / 2 + 1000;
+
+  return Math.floor(widthAvailable / itemWidth);
 };
 
 const getCurrentItemFromScroll = (scrollerRef: RefObject<HTMLDivElement>) => {
