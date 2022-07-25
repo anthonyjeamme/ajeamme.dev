@@ -8,9 +8,7 @@ export const SliderItem = ({ item, focus }: any) => (
       style={{
         backgroundImage: `url(${item.image})`,
       }}
-    >
-      {item.id}
-    </div>
+    ></div>
   </div>
 );
 
