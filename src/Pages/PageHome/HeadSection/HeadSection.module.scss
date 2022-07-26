@@ -1,0 +1,139 @@
+.HeadSection {
+  padding: 200px 0;
+  background-image: linear-gradient(to top, transparent, rgba(#262d4d, 0.7)),
+    linear-gradient(to top left, rgba(211, 87, 49, 0.5), transparent);
+  background-color: #5d6bbb;
+  color: white;
+
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .columns {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .text {
+      flex: 1;
+    }
+  }
+
+  .profile-picture {
+    position: relative;
+    & > img {
+      height: 300px;
+      width: 300px;
+      border-radius: 300px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: rgba(white, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 40px;
+      transform: rotate(20deg) scale(0.9);
+    }
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-weight: 500;
+
+    i {
+      font-style: normal;
+      font-weight: 300;
+    }
+  }
+
+  .subheadline {
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(white, 0.8);
+
+    strong {
+      font-size: 22px;
+      font-weight: 500;
+      color: white;
+      background-color: white;
+      color: var(--dark);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin: 0 4px;
+    }
+  }
+
+  .cta {
+    margin: 50px 0 0;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    // background-image: linear-gradient(90deg, #e3993b, transparent);
+    // box-shadow: 0 4px 0 #9b593a, inset 0 1px 0 hsl(0deg 0% 100% / 50%);
+    color: white;
+    font: inherit;
+    border: 0;
+    font-size: 22px;
+    position: relative;
+    background-color: transparent;
+    font-weight: 500;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      bottom: -8px;
+      right: -8px;
+      background-color: rgba(white, 0.15);
+      border-radius: 16px;
+      opacity: 0;
+      transform: scale(0.93, 0.8);
+      transition: opacity 150ms, transform 150ms;
+    }
+
+    & > span {
+      padding: 0 40px;
+      background-color: #e1963a;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+
+      & > svg {
+        margin-right: 6px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}

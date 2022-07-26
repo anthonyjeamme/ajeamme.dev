@@ -1,7 +1,10 @@
-import { ArrowLeft, ArrowRight, CaretLeft, CaretRight } from "phosphor-react";
-import { useEffect, useRef, useState } from "react";
 import Slider from "../../components/Slider/Slider";
+import BlogSection from "./BlogSection/BlogSection";
+import ContactSection from "./ContactSection/ContactSection";
+import ExperienceSection from "./ExperienceSection/ExperienceSection";
+import HeadSection from "./HeadSection/HeadSection";
 import styles from "./PageHome.module.scss";
+import SkillsSection from "./SkillsSection/SkillsSection";
 
 export const PageHome = () => {
   const items = [
@@ -59,7 +62,18 @@ export const PageHome = () => {
 
   return (
     <div className={styles["PageHome"]}>
-      <section>
+      <Topbar />
+      <HeadSection />
+
+      <SkillsSection />
+      <ExperienceSection />
+      <BlogSection />
+      {/* <section
+        className={styles["TEST"]}
+        style={{
+          padding: "100px 0",
+        }}
+      >
         <div>
           <div className={styles["container"]}>
             <h1>Test !</h1>
@@ -74,9 +88,23 @@ export const PageHome = () => {
 
           <Slider items={items} />
         </div>
-      </section>
+      </section> */}
+
+      <ContactSection />
     </div>
   );
 };
 
 export default PageHome;
+
+const Topbar = () => {
+  return (
+    <div className={styles["Topbar"]}>
+      <div>
+        <img src="/images/logo.svg" className={styles["logo"]} />
+      </div>
+
+      <div>ok</div>
+    </div>
+  );
+};

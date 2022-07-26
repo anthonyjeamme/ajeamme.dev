@@ -1,0 +1,20 @@
+.SkillsSection {
+  background-color: var(--dark);
+  color: white;
+  padding: 100px 0;
+
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 720px;
+
+    strong {
+      background-color: white;
+      color: var(--primary);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-weight: 400;
+      margin: 0 2px;
+    }
+  }
+}

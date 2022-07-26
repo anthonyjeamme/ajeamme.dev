@@ -8,7 +8,7 @@ interface TLayoutProps {
 
 const Layout: React.FC<TLayoutProps> = ({ children }) => {
   const colors = {
-    dark: "#262d4d",
+    dark: "#272740", // 262d4d
     light: "#ecf0f8",
     primary: "#5d6bbb",
   };

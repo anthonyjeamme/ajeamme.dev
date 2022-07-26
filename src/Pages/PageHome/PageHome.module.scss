@@ -1,16 +1,30 @@
 .PageHome {
   //
 
-  h1 {
-    margin: 0;
-    font-size: 40px;
+  h2 {
+    font-size: 30px;
     font-weight: 500;
+    margin: 0 0 20px 0;
+    position: relative;
+
+    &::after {
+      content: "XX";
+      display: flex;
+      position: absolute;
+      height: 10px;
+      bottom: 4px;
+      right: calc(100% - 50px);
+      width: 10000px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.1;
+    }
   }
 
-  section {
-    background-color: var(--primary);
+  .TEST {
     color: white;
-    padding: 50px 0;
+
+    background-color: var(--primary);
 
     .container {
       width: 1000px;
@@ -18,5 +32,25 @@
       max-width: 100%;
       padding: 0 20px;
     }
+  }
+}
+
+.Topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    display: flex;
   }
 }
