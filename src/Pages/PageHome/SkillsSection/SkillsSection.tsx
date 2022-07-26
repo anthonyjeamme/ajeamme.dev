@@ -1,13 +1,14 @@
 import React from "react";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
+import SectionTitle from "../common/SectionTitle/SectionTitle";
 
 import styles from "./SkillsSection.module.scss";
 
 export const SkillsSection = () => {
   return (
-    <div className={styles["SkillsSection"]}>
+    <div className={styles["SkillsSection"]} id="competence">
       <HomeContainer>
-        <h2>Domaine de compétence</h2>
+        <SectionTitle>Domaine de compétence</SectionTitle>
 
         <p>
           <strong>React</strong> sur <strong>Next.js</strong> et{" "}

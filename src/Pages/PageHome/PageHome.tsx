@@ -66,7 +66,7 @@ export const PageHome = () => {
       <HeadSection />
 
       <SkillsSection />
-      <ExperienceSection />
+      {/* <ExperienceSection /> */}
       <BlogSection />
       {/* <section
         className={styles["TEST"]}
@@ -104,7 +104,13 @@ const Topbar = () => {
         <img src="/images/logo.svg" className={styles["logo"]} />
       </div>
 
-      <div>ok</div>
+      <div>
+        <nav>
+          <a href="#competence">Compétences</a>
+          <a href="#experience">Expérience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   );
 };

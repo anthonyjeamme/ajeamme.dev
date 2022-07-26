@@ -1,26 +1,4 @@
 .PageHome {
-  //
-
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 0 0 20px 0;
-    position: relative;
-
-    &::after {
-      content: "XX";
-      display: flex;
-      position: absolute;
-      height: 10px;
-      bottom: 4px;
-      right: calc(100% - 50px);
-      width: 10000px;
-      background-color: white;
-      border-radius: 10px;
-      opacity: 0.1;
-    }
-  }
-
   .TEST {
     color: white;
 
@@ -52,5 +30,18 @@
     height: 40px;
     width: 40px;
     display: flex;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 50px;
+
+    & > a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

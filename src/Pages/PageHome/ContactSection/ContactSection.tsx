@@ -7,16 +7,17 @@ import {
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
+import SectionTitle from "../common/SectionTitle/SectionTitle";
 
 import styles from "./ContactSection.module.scss";
 
 export const ContactSection = () => {
   return (
-    <section className={styles["ContactSection"]}>
+    <section className={styles["ContactSection"]} id="contact">
       <HomeContainer>
         <div className={styles["columns"]}>
           <div>
-            <h2>Retrouvez moi sur...</h2>
+            <SectionTitle>Retrouvez moi sur...</SectionTitle>
             <div className={styles["links"]}>
               <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
                 <LinkedinLogo />

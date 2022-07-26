@@ -1,0 +1,36 @@
+.SectionTitle {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 40px 0;
+  position: relative;
+
+  & > span {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      height: 14px;
+      bottom: 2px;
+      right: -20px;
+      width: 100vw;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.1;
+    }
+
+    & > span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &.blueLine {
+    & > span {
+      &::after {
+        background-color: var(--primary);
+      }
+    }
+  }
+}

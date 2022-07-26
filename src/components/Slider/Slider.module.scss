@@ -22,20 +22,20 @@
     }
 
     @media (pointer: fine) {
-      &::-webkit-scrollbar {
-        height: 12px;
-        background-color: rgba(white, 0.1);
-      }
+      // &::-webkit-scrollbar {
+      //   height: 12px;
+      //   background-color: rgba(white, 0.1);
+      // }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(white, 0.2);
-        border-radius: 4px;
-        cursor: pointer;
+      // &::-webkit-scrollbar-thumb {
+      //   background-color: rgba(white, 0.2);
+      //   border-radius: 4px;
+      //   cursor: pointer;
 
-        &:hover {
-          background-color: rgba(white, 0.4);
-        }
-      }
+      //   &:hover {
+      //     background-color: rgba(white, 0.4);
+      //   }
+      // }
     }
 
     & > div {

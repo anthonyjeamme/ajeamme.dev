@@ -1,13 +1,14 @@
 import React from "react";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
+import SectionTitle from "../common/SectionTitle/SectionTitle";
 
 import styles from "./ExperienceSection.module.scss";
 
 export const ExperienceSection = () => {
   return (
-    <div className={styles["ExperienceSection"]}>
+    <div className={styles["ExperienceSection"]} id="experience">
       <HomeContainer>
-        <h2>Expérience</h2>
+        <SectionTitle>Expérience</SectionTitle>
       </HomeContainer>
     </div>
   );

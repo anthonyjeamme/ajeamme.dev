@@ -5,8 +5,13 @@
 
   p {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.6;
     max-width: 720px;
+    margin: 10px 0;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
 
     strong {
       background-color: white;
