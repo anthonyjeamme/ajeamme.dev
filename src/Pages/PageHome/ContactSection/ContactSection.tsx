@@ -32,7 +32,6 @@ export const ContactSection = () => {
           </div>
 
           <div>
-            <h2>Besoin d'aide ?</h2>
             <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
               <button className={styles["cta"]}>
                 <ChatCircleDots /> Discutons de votre projet !

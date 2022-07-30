@@ -48,7 +48,7 @@ const useScroll = (handleScroll: () => void) => {
     return () => {
       scrollerElement.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return {
     scrollerRef,

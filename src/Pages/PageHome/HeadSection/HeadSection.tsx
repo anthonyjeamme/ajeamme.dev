@@ -22,7 +22,7 @@ export const HeadSection = () => {
             </div>
 
             <button className={styles["cta"]}>
-              <span>Ce que je peux faire pour vous</span>
+              <span>En savoir +</span>
             </button>
           </div>
         </div>

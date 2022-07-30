@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 import Slider from "../../components/Slider/Slider";
 import BlogSection from "./BlogSection/BlogSection";
 import ContactSection from "./ContactSection/ContactSection";
@@ -66,8 +68,9 @@ export const PageHome = () => {
       <HeadSection />
 
       <SkillsSection />
-      {/* <ExperienceSection /> */}
-      <BlogSection />
+
+      <ExperienceSection />
+      {/* <BlogSection /> */}
       {/* <section
         className={styles["TEST"]}
         style={{
@@ -98,10 +101,34 @@ export const PageHome = () => {
 export default PageHome;
 
 const Topbar = () => {
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!rootRef.current) return;
+
+      const opacity = Math.min(1, window.scrollY / 500);
+
+      rootRef.current.style.backgroundColor = `rgba(93, 107, 187, ${opacity})`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles["Topbar"]}>
+    <div ref={rootRef} className={styles["Topbar"]}>
       <div>
-        <img src="/images/logo.svg" className={styles["logo"]} />
+        <Image
+          src="/images/logo.svg"
+          className={styles["logo"]}
+          height={40}
+          width={40}
+          alt="Anthony JEAMME logo"
+        />
       </div>
 
       <div>

@@ -1,5 +1,132 @@
 .ExperienceSection {
   background-color: var(--primary);
+
   color: white;
   padding: 100px 0;
+
+  .link {
+    & > button {
+      margin-top: 40px;
+      background-color: transparent;
+      border: 0;
+      font: inherit;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @media (pointer: fine) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & > svg {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 26px;
+    margin: 0 0 40px 0;
+  }
+
+  p {
+    line-height: 1.4;
+    strong {
+      font-weight: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    li {
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  p,
+  ul {
+    margin: 20px 0;
+  }
+}
+
+.stack {
+  .item {
+    background-color: white;
+    color: var(--dark);
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 0 50px;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+
+    padding: 0 20px;
+  }
+
+  .text {
+    max-width: 710px;
+
+    display: flex;
+    align-items: center;
+
+    & > div {
+      & > :nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .picture-container {
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    .fake-picture {
+      position: relative;
+      height: 400px;
+      width: 600px;
+      background-color: var(--light);
+      border-radius: 20px;
+      z-index: 2;
+      // &::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   border-radius: 40px;
+
+      //   $border-width: 20px;
+
+      //   top: -$border-width;
+      //   left: -$border-width;
+      //   right: -$border-width;
+      //   bottom: -$border-width;
+
+      //   border: $border-width solid rgba(white, 0.1);
+      // }
+
+      img {
+        border-radius: 20px;
+        max-width: 100%;
+      }
+    }
+  }
 }
