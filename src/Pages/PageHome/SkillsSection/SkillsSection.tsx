@@ -32,7 +32,7 @@ export default SkillsSection;
 
 const Skills = () => (
   <div>
-    <h3>Stack</h3>
+    <h3> Stack</h3>
 
     <div className={styles["stack"]}>
       <div className={styles["item"]}>
@@ -90,8 +90,8 @@ const Arguments = () => (
 
       <p>
         Je vous aide à intégrer vos maquettes, au pixel près, responsive et à
-        les perfectionner au besoin : micro contenu, micro interaction,
-        typographie etc.
+        perfectionner au besoin : micro contenu, micro interaction, typographie
+        etc.
       </p>
     </div>
 
@@ -134,7 +134,7 @@ const Arguments = () => (
       <p>
         Je met un point d'honneur à assurer de bonnes performances /
         accessibilité / bonnes pratiques SEO :<br />
-        Un site performant = plus de visiteurs et plus de visiteurs satisfaits.
+        Un site optimisé = plus de visiteurs et plus d'utilisateurs satisfaits.
       </p>
     </div>
   </div>

@@ -17,17 +17,14 @@ export const ContactSection = () => {
       <HomeContainer>
         <div className={styles["columns"]}>
           <div>
-            <SectionTitle>Retrouvez moi sur...</SectionTitle>
-            <div className={styles["links"]}>
-              <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
-                <LinkedinLogo />
-              </ExternalLink>
-              <ExternalLink href="https://twitter.com/ajeamme">
-                <TwitterLogo />
-              </ExternalLink>
-              <ExternalLink href="/">
-                <YoutubeLogo />
-              </ExternalLink>
+            <div className={styles["legal"]}>
+              Anthony Jeamme
+              <br />
+              Micro-entreprise
+              <br />
+              20 quai pierre scize - 69000 LYON, FRANCE
+              <br />
+              Siret: 83166072500035
             </div>
           </div>
 
@@ -37,6 +34,18 @@ export const ContactSection = () => {
                 <ChatCircleDots /> Discutons de votre projet !
               </button>
             </ExternalLink>
+
+            <div className={styles["links"]}>
+              <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
+                <LinkedinLogo alt="LinkedIn" />
+              </ExternalLink>
+              <ExternalLink href="https://twitter.com/ajeamme">
+                <TwitterLogo alt="Twitter" />
+              </ExternalLink>
+              <ExternalLink href="/">
+                <YoutubeLogo alt="Youtube" />
+              </ExternalLink>
+            </div>
           </div>
         </div>
       </HomeContainer>

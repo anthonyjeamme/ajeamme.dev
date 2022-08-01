@@ -16,12 +16,12 @@ export const ExperienceSection = () => {
           <div className={styles["text"]}>
             <div>
               <div className={styles["stack"]}>
-                Stack : <span className={styles["item"]}>Nx</span>
-                <span className={styles["item"]}>Next.js</span>
-                <span className={styles["item"]}>Node</span>
-                <span className={styles["item"]}>MongoDB</span>
-                <span className={styles["item"]}>Stripe</span>
-                <span className={styles["item"]}>Analytics</span>
+                <span className={styles["item"]}>Nx</span>{" "}
+                <span className={styles["item"]}>Next.js</span>{" "}
+                <span className={styles["item"]}>Node</span>{" "}
+                <span className={styles["item"]}>MongoDB</span>{" "}
+                <span className={styles["item"]}>Stripe</span>{" "}
+                <span className={styles["item"]}>Analytics</span>{" "}
                 <span className={styles["item"]}>Netlify</span>
               </div>
 
@@ -34,8 +34,12 @@ export const ExperienceSection = () => {
 
               <ul>
                 <li>
-                  Plateformes pour plus de 100 clients, personnalisables via un
-                  dashboard.
+                  Plateformes (marketplace) pour plus de 100 clients,
+                  personnalisables via un dashboard.
+                </li>
+                <li>
+                  Système de vente de produits et de services (Mercanet /
+                  Stripe)
                 </li>
                 <li>
                   Un système de création de site WYSIWYG pour les acteurs
