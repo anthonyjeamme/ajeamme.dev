@@ -1,0 +1,68 @@
+.AboutSection {
+  padding: 200px 0;
+  background-color: var(--light);
+
+  .icon {
+    display: inline-flex;
+    width: 18px;
+  }
+
+  .download-cv {
+    margin-top: 60px;
+    height: 200px;
+    width: 160px;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid rgba(var(--dark-dec), 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: transform 250ms, box-shadow 250ms;
+    box-shadow: 0 0 0 rgba(var(--dark-dec), 0.2);
+
+    &:hover {
+      transform: scale(1.025);
+      box-shadow: 0 4px 20px rgba(var(--dark-dec), 0.1);
+    }
+
+    & > svg {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      display: flex;
+      align-items: center;
+
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 14px;
+      }
+
+      & > .icon {
+        width: 18px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  font-size: 30px;
+
+  border-top: 2px solid rgba(var(--dark-dec), 0.1);
+  padding-top: 20px;
+  justify-content: center;
+
+  & > :not(:nth-last-child(1)) {
+    margin-right: 20px;
+  }
+}

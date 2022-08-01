@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Slider from "../../components/Slider/Slider";
 import { BurgerButton } from "../../Layout/BurgerButton/BurgerButton";
+import { AboutSection } from "./AboutSection/AboutSection";
 import BlogSection from "./BlogSection/BlogSection";
 import ContactSection from "./ContactSection/ContactSection";
 import ExperienceSection from "./ExperienceSection/ExperienceSection";
@@ -98,6 +99,8 @@ export const PageHome = () => {
           <Slider items={items} />
         </div>
       </section> */}
+
+      <AboutSection />
 
       <ContactSection />
     </div>

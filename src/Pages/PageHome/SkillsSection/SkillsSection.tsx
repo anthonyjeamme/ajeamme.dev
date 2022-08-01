@@ -11,26 +11,13 @@ export const SkillsSection = () => {
       <HomeContainer text>
         <SectionTitle>Domaine de compétence</SectionTitle>
 
-        <div className={styles["stack"]}>
-          <div className={styles["item"]}>
-            <img src="/images/stack/React.svg" />
-          </div>
-          <div className={styles["item"]}>
-            <img src="/images/stack/Next.js.svg" />
-          </div>
-          <div className={styles["item"]}>
-            <img src="/images/stack/Netlify.svg" />
-          </div>
-          <div className={styles["item"]}>
-            <img src="/images/stack/Node.js.svg" />
-          </div>
-          <div className={styles["item"]}>
-            <img src="/images/stack/PostgreSQL.svg" />
-          </div>
-          <div className={styles["item"]}>
-            <img src="/images/stack/MongoDB.svg" />
-          </div>
-        </div>
+        <p>
+          Stack principale : React / Next.js / SCSS / AWS functions / Netlify
+        </p>
+        <p>Testing & logging tools : Cypress / Jest / Sentry</p>
+        <p>Base de données : MongoDB / PostgreSQL</p>
+
+        <p>Autres : UX/UI design - Adobe illustrator - Copywriting</p>
 
         {/* <p>
           <strong>React</strong> sur <strong>Next.js</strong> et{" "}
