@@ -1,12 +1,18 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Slider from "../../components/Slider/Slider";
+import { BurgerButton } from "../../Layout/BurgerButton/BurgerButton";
 import BlogSection from "./BlogSection/BlogSection";
 import ContactSection from "./ContactSection/ContactSection";
 import ExperienceSection from "./ExperienceSection/ExperienceSection";
 import HeadSection from "./HeadSection/HeadSection";
 import styles from "./PageHome.module.scss";
 import SkillsSection from "./SkillsSection/SkillsSection";
+
+const Topbar = dynamic(() => import("../../Layout/TopBar/TopBar"), {
+  ssr: false,
+});
 
 export const PageHome = () => {
   const items = [
@@ -99,45 +105,3 @@ export const PageHome = () => {
 };
 
 export default PageHome;
-
-const Topbar = () => {
-  const rootRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!rootRef.current) return;
-
-      const opacity = Math.min(1, window.scrollY / 500);
-
-      rootRef.current.style.backgroundColor = `rgba(93, 107, 187, ${opacity})`;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <div ref={rootRef} className={styles["Topbar"]}>
-      <div>
-        <Image
-          src="/images/logo.svg"
-          className={styles["logo"]}
-          height={40}
-          width={40}
-          alt="Anthony JEAMME logo"
-        />
-      </div>
-
-      <div>
-        <nav>
-          <a href="#competence">Compétences</a>
-          <a href="#experience">Expérience</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </div>
-  );
-};

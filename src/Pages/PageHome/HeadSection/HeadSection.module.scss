@@ -150,9 +150,10 @@
     }
 
     & > span {
-      padding: 0 40px;
+      border: 2px solid white;
+      padding: 0 30px;
       background-color: #e1963a;
-      height: 60px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;

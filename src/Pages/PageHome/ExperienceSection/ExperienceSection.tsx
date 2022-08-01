@@ -22,7 +22,8 @@ export const ExperienceSection = () => {
               <span className={styles["item"]}>Node</span> /{" "}
               <span className={styles["item"]}>MongoDB</span> /{" "}
               <span className={styles["item"]}>Stripe</span> /{" "}
-              <span className={styles["item"]}>Analytics</span>
+              <span className={styles["item"]}>Analytics</span> /{" "}
+              <span className={styles["item"]}>Netlify</span>
             </div>
 
             <p>

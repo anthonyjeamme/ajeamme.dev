@@ -1,0 +1,94 @@
+.BurgerButton {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  background-color: transparent;
+  border: 0;
+  opacity: 0.6;
+  transform: scale(0.9);
+  z-index: 10;
+
+  @keyframes Rotate {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  & > .bar1 {
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    width: 28px;
+    left: 4px;
+    top: 16px;
+    border-radius: 4px;
+    transition: transform 250ms;
+    transform: translateY(-5px) rotate(0);
+
+    //
+  }
+  & > .bar2 {
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    width: 28px;
+    left: 4px;
+    top: 16px;
+    border-radius: 4px;
+    transition: transform 250ms;
+    transform: translateY(5px) rotate(0);
+  }
+
+  &.isOpen {
+    & > .bar1 {
+      transform: rotate(45deg);
+    }
+
+    & > .bar2 {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+
+  color: var(--dark);
+
+  @keyframes BurgerModalEntry {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    to {
+      transform: none;
+    }
+  }
+
+  animation: BurgerModalEntry 400ms;
+
+  & > header {
+    height: 60px;
+    background-color: var(--primary);
+    margin-bottom: 40px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
