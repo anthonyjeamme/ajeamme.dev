@@ -23,9 +23,30 @@ export const BurgerButton = () => {
         <div {...className("modal")}>
           <header></header>
           <nav>
-            <a href="#competence">Compétences</a>
-            <a href="#experience">Expérience</a>
-            <a href="#contact">Contact</a>
+            <a
+              href="#competence"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Compétences
+            </a>
+            <a
+              href="#experience"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Expérience
+            </a>
+            <a
+              href="#contact"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Contact
+            </a>
           </nav>
         </div>
       )}
