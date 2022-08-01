@@ -1,3 +1,4 @@
+import { Envelope, EnvelopeSimpleOpen, FilePdf } from "phosphor-react";
 import React from "react";
 
 import styles from "./HeadSection.module.scss";
@@ -21,9 +22,21 @@ export const HeadSection = () => {
               maintenables et centrées sur l'utilisateur.
             </div>
 
-            <button className={styles["cta"]}>
-              <span>En savoir +</span>
-            </button>
+            <div className={styles["buttons"]}>
+              <button className={styles["cta"]}>
+                <span>
+                  <EnvelopeSimpleOpen />
+                  <span>Contactez-moi</span>
+                </span>
+              </button>
+
+              <button className={styles["curriculum-vitae"]}>
+                <span>
+                  <FilePdf />
+                  <span>Curriculum vitæ</span>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
