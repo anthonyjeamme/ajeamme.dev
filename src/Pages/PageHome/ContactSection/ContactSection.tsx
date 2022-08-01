@@ -7,7 +7,6 @@ import {
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
-import SectionTitle from "../common/SectionTitle/SectionTitle";
 
 import styles from "./ContactSection.module.scss";
 

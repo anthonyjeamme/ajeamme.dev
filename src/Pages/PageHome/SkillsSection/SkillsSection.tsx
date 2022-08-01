@@ -32,7 +32,7 @@ export default SkillsSection;
 
 const Skills = () => (
   <div>
-    <h3> Stack</h3>
+    <h3>Stack</h3>
 
     <div className={styles["stack"]}>
       <div className={styles["item"]}>

@@ -9,6 +9,10 @@
     padding: 110px 0 50px 0;
   }
 
+  @media (max-width: 500px) {
+    padding: 60px 0 40px 0;
+  }
+
   .container {
     width: 1000px;
     margin: 0 auto;
@@ -18,13 +22,20 @@
 
   .columns {
     display: flex;
-    gap: 70px;
     justify-content: space-between;
     align-items: center;
 
+    & > :not(:nth-last-child(1)) {
+      margin-right: 70px;
+    }
+
     @media (max-width: 1000px) {
       flex-direction: column;
-      gap: 30px;
+
+      & > :not(:nth-last-child(1)) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
     }
 
     & > .text {
@@ -196,45 +207,8 @@
 
     padding: 0 20px;
 
-    & > :not(:nth-last-child(1)) {
-      @media (min-width: 769px) {
-        margin-right: 20px;
-      }
-      @media (max-width: 768px) {
-        margin-bottom: 20px;
-      }
-    }
-
     @media (max-width: 768px) {
-      flex-direction: column;
-
-      & > * {
-        margin: 0;
-      }
-    }
-  }
-}
-
-.curriculum-vitae {
-  border: 0;
-  background-color: transparent;
-  font: inherit;
-  padding: 0;
-  color: var(--dark);
-  cursor: pointer;
-
-  & > span {
-    background-color: white;
-    height: 50px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    justify-content: center;
-
-    & > svg {
-      margin-right: 10px;
-      font-size: 26px;
+      justify-content: center;
     }
   }
 }

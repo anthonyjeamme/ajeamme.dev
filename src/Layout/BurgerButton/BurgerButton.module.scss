@@ -55,40 +55,93 @@
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
+  & > .overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(var(--dark-dec), 0.8);
 
-  color: var(--dark);
+    @keyframes BurgerModalOverlayEntry {
+      from {
+        opacity: 0;
+      }
 
-  @keyframes BurgerModalEntry {
-    from {
-      transform: translateX(100px);
-      opacity: 0;
+      to {
+        opacity: 1;
+      }
     }
 
-    50% {
-      opacity: 1;
-    }
-
-    to {
-      transform: none;
-    }
+    animation: BurgerModalOverlayEntry 400ms;
   }
 
-  animation: BurgerModalEntry 400ms;
-
-  & > header {
-    height: 60px;
-    background-color: var(--primary);
-    margin-bottom: 40px;
-  }
-
-  nav {
+  & > .content {
+    position: fixed;
+    top: 0;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: var(--dark);
     display: flex;
     flex-direction: column;
+
+    & > header {
+      height: 60px;
+      background-color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      flex: 1;
+
+      & > a {
+        display: block;
+        padding: 10px 20px;
+      }
+    }
+
+    & > footer {
+      padding: 20px;
+
+      button {
+        width: 100%;
+        padding: 0 30px;
+        background-color: #e1963a;
+        background-image: linear-gradient(
+          to bottom right,
+          transparent,
+          #d35731 200%
+        );
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+      }
+    }
+
+    @keyframes BurgerModalEntry {
+      from {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    animation: BurgerModalEntry 400ms;
   }
 }

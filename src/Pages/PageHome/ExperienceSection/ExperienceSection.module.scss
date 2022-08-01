@@ -78,12 +78,15 @@
   grid-template-columns: auto auto;
   justify-content: space-between;
   margin: 0 auto;
-  gap: 20px;
 
   @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
+
+    & > :nth-child(1) {
+      margin-bottom: 20px;
+    }
   }
 
   .text {

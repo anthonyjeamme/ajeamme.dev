@@ -1,5 +1,6 @@
 import { Envelope, EnvelopeSimpleOpen, FilePdf } from "phosphor-react";
 import React from "react";
+import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 
 import styles from "./HeadSection.module.scss";
 
@@ -23,12 +24,14 @@ export const HeadSection = () => {
             </div>
 
             <div className={styles["buttons"]}>
-              <button className={styles["cta"]}>
-                <span>
-                  <EnvelopeSimpleOpen />
-                  <span>Contactez-moi</span>
-                </span>
-              </button>
+              <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
+                <button className={styles["cta"]}>
+                  <span>
+                    <EnvelopeSimpleOpen />
+                    <span>Contactez-moi</span>
+                  </span>
+                </button>
+              </ExternalLink>
             </div>
           </div>
         </div>
