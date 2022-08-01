@@ -8,7 +8,7 @@ const className = classNameModule(styles);
 export const HomeContainer: React.FC<{
   children: ReactNode;
   text?: boolean;
-}> = ({ text, children }) => {
+}> = ({ text = false, children }) => {
   return <div {...className("HomeContainer", { text })}>{children}</div>;
 };
 
