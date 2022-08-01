@@ -4,6 +4,11 @@
   margin: 0 0 60px 0;
   position: relative;
 
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
   & > span {
     position: relative;
 

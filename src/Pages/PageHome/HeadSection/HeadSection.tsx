@@ -29,13 +29,6 @@ export const HeadSection = () => {
                   <span>Contactez-moi</span>
                 </span>
               </button>
-
-              <button className={styles["curriculum-vitae"]}>
-                <span>
-                  <FilePdf />
-                  <span>Curriculum vitæ</span>
-                </span>
-              </button>
             </div>
           </div>
         </div>

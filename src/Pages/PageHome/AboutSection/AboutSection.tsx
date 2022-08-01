@@ -22,6 +22,13 @@ export const AboutSection = () => {
             <span className={styles["icon"]}>
               <HouseLine weight="duotone" />
             </span>{" "}
+            {getAge()}
+            ans, freelance
+          </li>
+          <li>
+            <span className={styles["icon"]}>
+              <HouseLine weight="duotone" />
+            </span>{" "}
             Saint-Étienne
           </li>
 
@@ -34,18 +41,19 @@ export const AboutSection = () => {
 
           <li>
             <span className={styles["icon"]}>
-              <Globe weight="duotone" />
-            </span>{" "}
-            Anglais, Espagnol, Portugais et débutant en chinois
-          </li>
-
-          <li>
-            <span className={styles["icon"]}>
               <Desktop weight="duotone" />
             </span>{" "}
             Développeur depuis {new Date().getFullYear() - 2014} ans,
             indépendant depuis {new Date().getFullYear() - 2018} ans
           </li>
+
+          <li>
+            <span className={styles["icon"]}>
+              <Globe weight="duotone" />
+            </span>{" "}
+            Anglais, Espagnol, Portugais et débutant en chinois
+          </li>
+
           <li>
             <span className={styles["icon"]}>
               <Heart weight="duotone" />
@@ -65,5 +73,18 @@ export const AboutSection = () => {
         </button>
       </HomeContainer>
     </div>
+  );
+};
+
+const getAge = () => {
+  const today = new Date();
+
+  const birthYear = 1989;
+  const birthMonth = 8;
+
+  return (
+    today.getFullYear() -
+    birthYear +
+    (today.getMonth() > birthMonth - 1 ? 0 : -1)
   );
 };

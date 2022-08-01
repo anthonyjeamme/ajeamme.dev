@@ -51,21 +51,21 @@ export const SkillsSection = () => {
           <strong>responsive</strong> et finement optimisé niveau UX.
         </p> */}
 
-        <SectionTitle>Domaine de compétence</SectionTitle>
-
         <div className={styles["arguments"]}>
           <div className={styles["argument"]}>
             <header>
               <div className={styles["icon"]}>
-                <PaintBrush weight="duotone" />
+                <span>
+                  <PaintBrush weight="duotone" />
+                </span>
               </div>
-              <div className={styles["label"]}>Intégration au pixel</div>
+              <div className={styles["label"]}>Intégration</div>
             </header>
 
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              aliquam est deleniti veniam, dolorum architecto eveniet
-              accusantium atque? Libero, nam minima! Assumenda?
+              Je vous aide à intégrer vos maquettes, au pixel près, responsive
+              et à les perfectionner si besoin : micro contenu, micro
+              interaction, typographie etc.
             </p>
           </div>
 
@@ -77,15 +77,17 @@ export const SkillsSection = () => {
                   backgroundColor: "#328864",
                 }}
               >
-                <Wall weight="duotone" />
+                <span>
+                  <Wall weight="duotone" />
+                </span>
               </div>
               <div className={styles["label"]}>
                 Code fonctionnel et maintenable
               </div>
             </header>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
-              dignissimos commodi similique fuga harum assumenda reiciendis.
+              Afin de préserver un code efficace, je travail essentiellement en
+              4 étapes : conception, développement, tests et refactorisation.
             </p>
           </div>
 
@@ -97,17 +99,19 @@ export const SkillsSection = () => {
                   backgroundColor: `#d35731`,
                 }}
               >
-                <Gauge weight="duotone" />
+                <span>
+                  <Gauge weight="duotone" />
+                </span>
               </div>
               <div className={styles["label"]}>
                 Application optimisée performances / SEO
               </div>
             </header>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
-              dignissimos commodi similique fuga harum assumenda reiciendis. Sit
-              aliquam est deleniti veniam, dolorum architecto eveniet
-              accusantium atque? Libero, nam minima! Assumenda?
+              Je met un point d'honneur à assurer de bonnes performances /
+              accessibilité / bonnes pratiques SEO :<br />
+              Un site performant = plus de visiteurs et plus de visiteurs
+              satisfaits.
             </p>
           </div>
         </div>
