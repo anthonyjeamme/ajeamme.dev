@@ -32,11 +32,11 @@
   .links {
     font-size: 40px;
     display: flex;
-    gap: 40px;
     margin-top: 30px;
 
     a {
       transition: color 250ms, transform 250ms;
+      margin-right: 20px;
 
       &:hover {
         color: var(--primary);

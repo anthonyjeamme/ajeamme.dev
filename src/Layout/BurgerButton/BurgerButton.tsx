@@ -1,3 +1,4 @@
+import { EnvelopeSimpleOpen } from "phosphor-react";
 import { useState } from "react";
 import { classNameModule } from "../../utils/classNameModule/classNameModule";
 import styles from "./BurgerButton.module.scss";
@@ -52,7 +53,11 @@ export const BurgerButton = () => {
               </a>
             </nav>
             <footer>
-              <button>Contactez-moi</button>
+              <button>
+                <EnvelopeSimpleOpen />
+
+                <span>Contactez-moi</span>
+              </button>
             </footer>
           </div>
         </div>

@@ -35,6 +35,10 @@
       & > :not(:nth-last-child(1)) {
         margin-right: 0;
         margin-bottom: 30px;
+
+        @media (max-width: 500px) {
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -62,6 +66,11 @@
         height: 180px;
         width: 180px;
       }
+
+      @media (max-width: 500px) {
+        height: 140px;
+        width: 140px;
+      }
     }
 
     &::after {
@@ -78,6 +87,10 @@
 
       @media (max-width: 768px) {
         border-radius: 30px;
+      }
+
+      @media (max-width: 500px) {
+        border-radius: 20px;
       }
     }
   }
@@ -97,8 +110,10 @@
       font-size: 40px;
       line-height: 1.2;
     }
+
     @media (max-width: 500px) {
       font-size: 30px;
+      margin-bottom: 10px;
     }
 
     i {
@@ -204,11 +219,14 @@
     display: flex;
     max-width: 300px;
     margin: 30px auto 0 auto;
-
     padding: 0 20px;
 
     @media (max-width: 768px) {
       justify-content: center;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 20px;
     }
   }
 }

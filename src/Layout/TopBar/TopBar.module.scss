@@ -11,7 +11,6 @@
   justify-content: space-between;
   padding: 0 20px;
   font-size: 18px;
-  font-weight: 300;
 
   .logo {
     height: 40px;
@@ -19,13 +18,13 @@
     display: flex;
   }
 
-  & > nav {
+  & > div > nav {
     display: flex;
     align-items: center;
     margin-right: 20px;
-    gap: 50px;
 
     & > a {
+      margin-left: 40px;
       &:hover {
         text-decoration: underline;
       }
