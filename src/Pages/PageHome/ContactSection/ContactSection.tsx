@@ -41,9 +41,9 @@ export const ContactSection = () => {
               <ExternalLink href="https://twitter.com/ajeamme">
                 <TwitterLogo alt="Twitter" />
               </ExternalLink>
-              <ExternalLink href="/">
+              {/* <ExternalLink href="/">
                 <YoutubeLogo alt="Youtube" />
-              </ExternalLink>
+              </ExternalLink> */}
             </div>
           </div>
         </div>
