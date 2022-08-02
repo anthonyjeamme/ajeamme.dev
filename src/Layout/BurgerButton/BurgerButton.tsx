@@ -6,7 +6,7 @@ import styles from "./BurgerButton.module.scss";
 const className = classNameModule(styles);
 
 export const BurgerButton = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
