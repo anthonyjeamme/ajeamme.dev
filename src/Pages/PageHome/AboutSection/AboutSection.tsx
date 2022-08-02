@@ -64,14 +64,16 @@ export const AboutSection = () => {
           </li>
         </ul>
 
-        <button className={styles["download-cv"]}>
-          <FilePdf />
-          <span>
-            Télécharger
-            <br />
-            mon CV
-          </span>
-        </button>
+        <a href="/CV - Anthony JEAMME.pdf" download>
+          <button className={styles["download-cv"]}>
+            <FilePdf />
+            <span>
+              Télécharger
+              <br />
+              mon CV
+            </span>
+          </button>
+        </a>
       </HomeContainer>
     </div>
   );
