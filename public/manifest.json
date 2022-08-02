@@ -1,0 +1,18 @@
+{
+  "short_name": "ajeamme",
+  "name": "Anthony JEAMME",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/logo.512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "background_color": "#272740",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#272740",
+  "description": "Anthony JEAMME website"
+}

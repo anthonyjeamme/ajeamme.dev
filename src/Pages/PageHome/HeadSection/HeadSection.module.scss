@@ -49,49 +49,22 @@
 
   .profile-picture {
     position: relative;
+    height: 300px;
+    width: 300px;
 
-    & > img {
-      height: 300px;
-      width: 300px;
-      border-radius: 300px;
-      position: relative;
-      z-index: 2;
-
-      @media (max-width: 1000px) {
-        height: 240px;
-        width: 240px;
-      }
-
-      @media (max-width: 768px) {
-        height: 180px;
-        width: 180px;
-      }
-
-      @media (max-width: 500px) {
-        height: 140px;
-        width: 140px;
-      }
+    @media (max-width: 1000px) {
+      height: 240px;
+      width: 240px;
     }
 
-    &::after {
-      content: "";
-      display: block;
-      background-color: rgba(white, 0.1);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 40px;
-      transform: rotate(20deg) scale(0.9);
+    @media (max-width: 768px) {
+      height: 180px;
+      width: 180px;
+    }
 
-      @media (max-width: 768px) {
-        border-radius: 30px;
-      }
-
-      @media (max-width: 500px) {
-        border-radius: 20px;
-      }
+    @media (max-width: 500px) {
+      height: 140px;
+      width: 140px;
     }
   }
 

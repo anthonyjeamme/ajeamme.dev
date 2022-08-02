@@ -31,7 +31,7 @@ export const Topbar = () => {
   return (
     <div ref={rootRef} {...className("Topbar")}>
       <div>
-        <Image
+        <img
           src="/images/logo.svg"
           className={styles["logo"]}
           height={40}

@@ -1,8 +1,13 @@
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import { Envelope, EnvelopeSimpleOpen, FilePdf } from "phosphor-react";
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 
 import styles from "./HeadSection.module.scss";
+const ProfileImage = dynamic(() => import("./ProfileImage/ProfileImage"), {
+  ssr: false,
+});
 
 export const HeadSection = () => {
   return (
@@ -10,7 +15,7 @@ export const HeadSection = () => {
       <div className={styles["container"]}>
         <div className={styles["columns"]}>
           <div className={styles["profile-picture"]}>
-            <img src="/images/profile-picture.jpg" alt="Anthony Jeamme" />
+            <ProfileImage />
           </div>
 
           <div className={styles["text"]}>
