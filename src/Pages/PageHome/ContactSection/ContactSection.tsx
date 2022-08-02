@@ -19,7 +19,7 @@ export const ContactSection = () => {
             <div className={styles["legal"]}>
               Anthony Jeamme
               <br />
-              Micro-entreprise
+              Entrepreneur Individuel
               <br />
               20 quai pierre scize - 69000 LYON, FRANCE
               <br />
