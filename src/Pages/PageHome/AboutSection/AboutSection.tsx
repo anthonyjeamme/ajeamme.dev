@@ -6,6 +6,7 @@ import {
   GraduationCap,
   Heart,
   HouseLine,
+  User,
 } from "phosphor-react";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
@@ -20,7 +21,7 @@ export const AboutSection = () => {
         <ul>
           <li>
             <span className={styles["icon"]}>
-              <HouseLine weight="duotone" />
+              <User weight="duotone" />
             </span>{" "}
             {getAge()}
             ans, freelance
