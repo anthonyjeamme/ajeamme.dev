@@ -1,5 +1,5 @@
-const SASSIcon = ({ size = 70 }) => (
-  <svg viewBox="0 0 100 100" height={size} width={size}>
+const SASSIcon = () => (
+  <svg viewBox="0 0 100 100">
     <title>SASS</title>
 
     <g

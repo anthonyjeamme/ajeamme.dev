@@ -6,6 +6,7 @@ import ExperienceSection from "./ExperienceSection/ExperienceSection";
 import HeadSection from "./HeadSection/HeadSection";
 import styles from "./PageHome.module.scss";
 import SkillsSection from "./SkillsSection/SkillsSection";
+import UXUISection from "./UXUISection/UXUISection";
 
 const Topbar = dynamic(() => import("../../Layout/TopBar/TopBar"), {
   ssr: false,
@@ -39,6 +40,7 @@ export const PageHome = () => {
       <Topbar />
       <HeadSection />
       <SkillsSection />
+      <UXUISection />
       <ExperienceSection />
       <AboutSection />
       <ContactSection />
@@ -47,3 +49,12 @@ export const PageHome = () => {
 };
 
 export default PageHome;
+
+/* Keywords
+
+- Nextjs
+- React
+- test
+- performance
+
+ */

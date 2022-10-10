@@ -1,5 +1,5 @@
 import { EnvelopeSimpleOpen } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { classNameModule } from "../../utils/classNameModule/classNameModule";
 import styles from "./BurgerButton.module.scss";
 
@@ -7,6 +7,16 @@ const className = classNameModule(styles);
 
 export const BurgerButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.documentElement.classList.add("disable-scroll");
+
+      return () => {
+        document.documentElement.classList.remove("disable-scroll");
+      };
+    }
+  }, [isOpen]);
 
   return (
     <div>

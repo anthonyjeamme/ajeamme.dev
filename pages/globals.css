@@ -8,6 +8,10 @@ body {
   -webkit-tap-highlight-color: #27274033;
 }
 
+html.disable-scroll {
+  overflow: hidden;
+}
+
 *::selection {
   background-color: #ffffff33;
 }

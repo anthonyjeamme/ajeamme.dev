@@ -22,6 +22,10 @@
     padding: 50px 0;
   }
 
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+
   h3 {
     font-size: 22px;
     font-weight: 500;
@@ -32,6 +36,10 @@
     @media (max-width: 768px) {
       font-size: 20px;
       margin: 20px 0 0 0;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 18px;
     }
 
     &:nth-child(1) {
@@ -74,16 +82,22 @@
     margin: 20px 0;
 
     @media (max-width: 768px) {
-      margin: 10px 0;
+      margin: 10px -10px;
     }
 
     & > .item {
       text-align: center;
-
       padding: 10px;
 
-      & > img {
+      & > img,
+      & > svg {
         height: 70px;
+        width: 70px;
+
+        @media (max-width: 500px) {
+          height: 40px;
+          width: 40px;
+        }
       }
       font-size: 16px;
     }
@@ -111,10 +125,7 @@
     max-width: 620px;
     background-color: rgba(white, 0.05);
     padding: 30px;
-    // border: 1px solid white;
-    // padding: 30px;
     border-radius: 10px;
-    // margin-left: 140px;
 
     @media (max-width: 768px) {
       padding: 20px;
@@ -146,10 +157,20 @@
       }
 
       & > .icon {
-        // margin-right: 10px;
+        display: flex;
+        padding: 0;
 
         svg {
           display: flex;
+          margin: auto;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 20px;
+          & > span {
+            height: 38px;
+            width: 38px;
+          }
         }
       }
 
@@ -160,6 +181,11 @@
 
         @media (max-width: 768px) {
           font-size: 20px;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 18px;
+          line-height: 1.1;
         }
       }
     }

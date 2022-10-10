@@ -1,5 +1,5 @@
-const ReactIcon = ({ size = 70 }) => (
-  <svg viewBox="0 0 100 100" height={size} width={size}>
+const ReactIcon = () => (
+  <svg viewBox="0 0 100 100">
     <title>React</title>
     <circle cx="50" cy="50" r="6.23" style={{ fill: "#61dafb" }} />
 

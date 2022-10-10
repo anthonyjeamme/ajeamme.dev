@@ -1,5 +1,5 @@
-const NextJSIcon = ({ size = 70 }) => (
-  <svg viewBox="0 0 100 100" height={size} width={size}>
+const NextJSIcon = () => (
+  <svg viewBox="0 0 100 100">
     <title>Next.js</title>
     <g
       style={{

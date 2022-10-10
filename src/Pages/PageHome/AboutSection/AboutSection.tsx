@@ -1,6 +1,5 @@
 import {
   Desktop,
-  DownloadSimple,
   FilePdf,
   Globe,
   GraduationCap,
@@ -60,7 +59,7 @@ export const AboutSection = () => {
               <Heart weight="duotone" />
             </span>{" "}
             Passions : langues, guitare, piano, lecture (non fiction), arts
-            martiaux
+            martiaux, echecs
           </li>
         </ul>
 
