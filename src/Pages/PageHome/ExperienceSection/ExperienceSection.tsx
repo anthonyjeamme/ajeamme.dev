@@ -5,6 +5,7 @@ import HomeContainer from "../common/HomeContainer/HomeContainer";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
 
 import styles from "./ExperienceSection.module.scss";
+import { Gallery } from "./Gallery/Gallery";
 
 export const ExperienceSection = () => {
   return (
@@ -67,15 +68,7 @@ export const ExperienceSection = () => {
 
           <div>
             <div className={styles["picture-container"]}>
-              <div className={styles["fake-picture"]}>
-                <Image
-                  quality={100}
-                  src="/images/coq-trotteur-preview.jpg"
-                  alt=""
-                  height={400}
-                  width={600}
-                />
-              </div>
+              <Gallery />
             </div>
           </div>
         </div>
