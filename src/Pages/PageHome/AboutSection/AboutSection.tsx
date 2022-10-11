@@ -7,6 +7,7 @@ import {
   HouseLine,
   User,
 } from "phosphor-react";
+import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
 import styles from "./AboutSection.module.scss";
@@ -58,8 +59,10 @@ export const AboutSection = () => {
             <span className={styles["icon"]}>
               <Heart weight="duotone" />
             </span>{" "}
-            Passions : langues, guitare, piano, lecture (non fiction), arts
-            martiaux, echecs
+            <div>
+              Passions : langues, guitare, piano, lecture (non fiction), arts
+              martiaux, échecs
+            </div>
           </li>
         </ul>
 
