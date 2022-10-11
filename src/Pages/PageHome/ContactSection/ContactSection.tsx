@@ -1,9 +1,4 @@
-import {
-  ChatCircleDots,
-  LinkedinLogo,
-  TwitterLogo,
-  YoutubeLogo,
-} from "phosphor-react";
+import { LinkedinLogo, TwitterLogo } from "phosphor-react";
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
@@ -30,7 +25,7 @@ export const ContactSection = () => {
           <div>
             <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
               <button className={styles["cta"]}>
-                <ChatCircleDots /> Discutons de votre projet !
+                <LinkedinLogo /> Discutons de votre projet !
               </button>
             </ExternalLink>
 

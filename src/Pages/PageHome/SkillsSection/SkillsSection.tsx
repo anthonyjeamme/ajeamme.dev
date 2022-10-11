@@ -1,4 +1,10 @@
-import { Gauge, PaintBrush, Wall } from "phosphor-react";
+import {
+  Airplane,
+  Gauge,
+  LightbulbFilament,
+  PaintBrush,
+  Wall,
+} from "phosphor-react";
 import React from "react";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
@@ -6,20 +12,27 @@ import SectionTitle from "../common/SectionTitle/SectionTitle";
 // Icons
 import NextJSIcon from "../../../components/Icons/NextJSIcon";
 
-import styles from "./SkillsSection.module.scss";
 import ReactIcon from "../../../components/Icons/ReactIcon";
 import SASSIcon from "../../../components/Icons/SASSIcon";
 import AWSLambdaIcon from "../../../components/Icons/AWSLambdaIcon";
 import NetlifyIcon from "../../../components/Icons/NetlifyIcon";
 import MongoDBIcon from "../../../components/Icons/MongoDBIcon";
 
+import { classNameModule } from "../../../utils/classNameModule/classNameModule";
+import styles from "./SkillsSection.module.scss";
+const className = classNameModule(styles);
+
 export const SkillsSection = () => {
   return (
-    <div className={styles["SkillsSection"]} id="competence">
+    <div {...className("SkillsSection")} id="competence">
+      <div {...className("illustration")}>
+        <LightbulbFilament />
+      </div>
+
       <HomeContainer large>
         <SectionTitle>Compétences</SectionTitle>
 
-        <div className={styles["columns"]}>
+        <div {...className("columns")}>
           <Skills />
           <Arguments />
         </div>
@@ -34,29 +47,29 @@ const Skills = () => (
   <div>
     <h3>Stack</h3>
 
-    <div className={styles["stack"]}>
-      <div className={styles["item"]}>
+    <div {...className("stack")}>
+      <div {...className("item")}>
         <ReactIcon />
         <div>React.js</div>
       </div>
-      <div className={styles["item"]}>
+      <div {...className("item")}>
         <NextJSIcon />
         <div>Next.js</div>
       </div>
-      <div className={styles["item"]}>
+      <div {...className("item")}>
         <SASSIcon />
         <div>SASS</div>
       </div>
 
-      <div className={styles["item"]}>
+      <div {...className("item")}>
         <AWSLambdaIcon />
         <div>Functions</div>
       </div>
-      <div className={styles["item"]}>
+      <div {...className("item")}>
         <NetlifyIcon />
         <div>Netlify</div>
       </div>
-      <div className={styles["item"]}>
+      <div {...className("item")}>
         <MongoDBIcon />
         <div>MongoDB</div>
       </div>
@@ -77,15 +90,15 @@ const Skills = () => (
 );
 
 const Arguments = () => (
-  <div className={styles["arguments"]}>
-    <div className={styles["argument"]}>
+  <div {...className("arguments")}>
+    <div {...className("argument")}>
       <header>
-        <div className={styles["icon"]}>
+        <div {...className("icon")}>
           <span>
             <PaintBrush weight="duotone" />
           </span>
         </div>
-        <div className={styles["label"]}>Intégration</div>
+        <div {...className("label")}>Intégration</div>
       </header>
 
       <p>
@@ -95,10 +108,10 @@ const Arguments = () => (
       </p>
     </div>
 
-    <div className={styles["argument"]}>
+    <div {...className("argument")}>
       <header>
         <div
-          className={styles["icon"]}
+          {...className("icon")}
           style={{
             backgroundColor: "#328864",
           }}
@@ -107,7 +120,7 @@ const Arguments = () => (
             <Wall weight="duotone" />
           </span>
         </div>
-        <div className={styles["label"]}>Code fonctionnel et maintenable</div>
+        <div {...className("label")}>Code fonctionnel et maintenable</div>
       </header>
       <p>
         Afin de préserver un code efficace, je travail essentiellement en 4
@@ -115,10 +128,10 @@ const Arguments = () => (
       </p>
     </div>
 
-    <div className={styles["argument"]}>
+    <div {...className("argument")}>
       <header>
         <div
-          className={styles["icon"]}
+          {...className("icon")}
           style={{
             backgroundColor: `#d35731`,
           }}
@@ -127,7 +140,7 @@ const Arguments = () => (
             <Gauge weight="duotone" />
           </span>
         </div>
-        <div className={styles["label"]}>
+        <div {...className("label")}>
           Application optimisée performances / SEO
         </div>
       </header>
