@@ -106,7 +106,7 @@ const ExperienceCarousel = () => {
 
 export default ExperienceCarousel;
 
-const Desktop = ({ image }) => {
+const Desktop: React.FC<{ image: string }> = ({ image }) => {
   return (
     <div {...className("Desktop")}>
       <div {...className("screen")}>
@@ -116,7 +116,7 @@ const Desktop = ({ image }) => {
   );
 };
 
-const Mobile = ({ image }) => {
+const Mobile: React.FC<{ image: string }> = ({ image }) => {
   return (
     <div {...className("Mobile")}>
       <div {...className("camera")} />
@@ -130,7 +130,7 @@ const Mobile = ({ image }) => {
 // Mobile : 440x856
 // Desktop : 1320x780
 
-const CarouselImage = ({ image }) => {
+const CarouselImage: React.FC<{ image: string }> = ({ image }) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const fullscreenImage = useContext(fullscreenImageContext);
 
