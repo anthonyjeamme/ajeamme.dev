@@ -1,0 +1,218 @@
+.ExperienceCarousel {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--dark);
+  box-sizing: border-box;
+  display: flex;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  .previous-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 50px;
+    color: white;
+    background-color: transparent;
+  }
+
+  .next-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 50px;
+    color: white;
+    background-color: transparent;
+  }
+
+  & > .background-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transition: background-color 400ms, width 400ms;
+  }
+
+  & > .devices {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+  }
+}
+
+.Mobile {
+  $proportion: 1.95;
+  $width: 240px;
+  height: calc($width * $proportion);
+  width: $width;
+
+  background-color: black;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 10px 10px 30px 10px;
+  display: flex;
+  z-index: 3;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 1200px) {
+    $width: 20vw;
+    height: calc($width * $proportion);
+    width: $width;
+    border-radius: 2.5vw;
+    padding: 1vw 1vw 3vw 1vw;
+  }
+
+  @media (max-width: 768px) {
+    transform: translate(-10%, -50%);
+  }
+
+  & > .camera {
+    position: absolute;
+    top: 20px;
+    height: 16px;
+    width: 16px;
+    border-radius: 20px;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+
+    @media (max-width: 1200px) {
+      top: 1.6vw;
+      height: 1.3vw;
+      width: 1.3vw;
+    }
+  }
+
+  & > .screen {
+    flex: 1;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 1200px) {
+      border-radius: 1.5vw;
+    }
+
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.Desktop {
+  background-color: black;
+
+  $width: 900px;
+  $proportion: 0.6;
+  width: $width;
+  height: calc($width * $proportion);
+  position: relative;
+  padding: 10px;
+  z-index: 2;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    $width: 75vw;
+    width: $width;
+    height: calc($width * $proportion);
+    border-radius: 1vw;
+    padding: 1vw;
+  }
+
+  & > .screen {
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+
+    @media (max-width: 1200px) {
+      border-radius: 0.2vw;
+    }
+
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.CarouselImage {
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.FullscreenImage {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  @keyframes FullscreenImageEntry {
+    from {
+      background-color: rgba(var(--dark-dec), 0);
+    }
+
+    to {
+      background-color: rgba(var(--dark-dec), 0.95);
+    }
+  }
+
+  animation: FullscreenImageEntry 400ms;
+  animation-fill-mode: forwards;
+
+  //   @keyframes FullscreenImageEntry {
+  //     from {
+  //       opacity: 0;
+  //       transform: translate(var(--from-w), var(--from-h));
+  //     }
+  //     to {
+  //       opacity: 1;
+  //       transform: unset;
+  //       transform: translate(var(--from-w), var(--from-h));
+  //     }
+  //   }
+
+  //   animation: FullscreenImageEntry 400ms;
+  //   animation-fill-mode: both;
+
+  img {
+    max-height: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    margin: auto;
+    transition: all 400ms;
+
+    @keyframes FullscreenImageImgEntry {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    animation: FullscreenImageImgEntry 400ms;
+  }
+}

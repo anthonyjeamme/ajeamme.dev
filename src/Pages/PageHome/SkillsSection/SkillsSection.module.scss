@@ -6,18 +6,6 @@
   overflow: hidden;
   position: relative;
 
-  .illustration {
-    position: absolute;
-    top: -30px;
-    right: -60px;
-    font-size: 200px;
-    opacity: 0.1;
-    transform: rotate(-30deg);
-
-    @media (max-width: 768px) {
-    }
-  }
-
   .columns {
     display: flex;
     justify-content: space-between;

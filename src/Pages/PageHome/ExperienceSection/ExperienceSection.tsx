@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Link } from "phosphor-react";
 import React from "react";
 import HomeContainer from "../common/HomeContainer/HomeContainer";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
+import ExperienceCarousel from "./ExperienceCarousel/ExperienceCarousel";
 
 import styles from "./ExperienceSection.module.scss";
 import { Gallery } from "./Gallery/Gallery";
@@ -65,14 +65,9 @@ export const ExperienceSection = () => {
               </a>
             </div>
           </div>
-
-          <div>
-            <div className={styles["picture-container"]}>
-              <Gallery />
-            </div>
-          </div>
         </div>
       </HomeContainer>
+      <ExperienceCarousel />
     </div>
   );
 };

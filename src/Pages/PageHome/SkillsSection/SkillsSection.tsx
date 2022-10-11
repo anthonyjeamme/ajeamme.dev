@@ -25,10 +25,6 @@ const className = classNameModule(styles);
 export const SkillsSection = () => {
   return (
     <div {...className("SkillsSection")} id="competence">
-      <div {...className("illustration")}>
-        <LightbulbFilament />
-      </div>
-
       <HomeContainer large>
         <SectionTitle>Compétences</SectionTitle>
 
