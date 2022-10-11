@@ -18,7 +18,7 @@ export const ContactSection = () => {
               <br />
               94 rue Roger Salengro, 42000 Saint-Étienne, France
               <br />
-              Siret: 83166072500035
+              SIRET: 831 660 725 00035
             </div>
           </div>
 
@@ -36,9 +36,6 @@ export const ContactSection = () => {
               <ExternalLink href="https://twitter.com/ajeamme">
                 <TwitterLogo alt="Twitter" />
               </ExternalLink>
-              {/* <ExternalLink href="/">
-                <YoutubeLogo alt="Youtube" />
-              </ExternalLink> */}
             </div>
           </div>
         </div>

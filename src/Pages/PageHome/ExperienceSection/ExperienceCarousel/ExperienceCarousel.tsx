@@ -1,5 +1,5 @@
-import { CaretLeft, CaretRight, Link } from "phosphor-react";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { CaretLeft, CaretRight } from "phosphor-react";
+import { createContext, useContext, useRef, useState } from "react";
 import { classNameModule } from "../../../../utils/classNameModule/classNameModule";
 import styles from "./ExperienceCarousel.module.scss";
 const className = classNameModule(styles);
@@ -7,21 +7,34 @@ const className = classNameModule(styles);
 const steps = [
   {
     color: "#5d6bbb",
-    width: "50%",
+    width: "60%",
     mobileImage: "/images/screenshots/1-mobile.png",
     desktopImage: "/images/screenshots/1-desktop.png",
+    description:
+      "Page d'accueil de destination, entièrement personnalisable via un dashboard",
   },
   {
     color: "#d35731",
     width: "40%",
     mobileImage: "/images/screenshots/2-mobile.png",
     desktopImage: "/images/screenshots/2-desktop.png",
+    description:
+      "Système de Story, créés par la destination et ses influenceurs",
   },
   {
-    color: "#e1963a",
+    color: "#8ed899",
     width: "60%",
     mobileImage: "/images/screenshots/3-mobile.png",
     desktopImage: "/images/screenshots/3-desktop.png",
+    description:
+      "Moteur de recherche par catégories, sous catégories et filtres",
+  },
+  {
+    color: "#e1963a",
+    width: "50%",
+    mobileImage: "/images/screenshots/4-mobile.png",
+    desktopImage: "/images/screenshots/4-desktop.png",
+    description: "Recherche par carte d'activités",
   },
 ];
 
@@ -59,14 +72,7 @@ const ExperienceCarousel = () => {
       {fullscreenImageElement && (
         <FullscreenImage imageElement={fullscreenImageElement} />
       )}
-      <div
-        {...className("ExperienceCarousel")}
-        onClick={() => {
-          //   setCurrentColorIndex(
-          //     (currentColorIndex) => (currentColorIndex + 1) % steps.length
-          //   );
-        }}
-      >
+      <div {...className("ExperienceCarousel")}>
         {" "}
         <button
           {...className("previous-button")}
@@ -91,6 +97,9 @@ const ExperienceCarousel = () => {
         <div {...className("devices")}>
           <Mobile image={currentStep.mobileImage} />
           <Desktop image={currentStep.desktopImage} />
+        </div>
+        <div {...className("description")}>
+          <div>{currentStep.description}</div>
         </div>
         <div
           {...className("background-block")}
@@ -126,9 +135,6 @@ const Mobile: React.FC<{ image: string }> = ({ image }) => {
     </div>
   );
 };
-
-// Mobile : 440x856
-// Desktop : 1320x780
 
 const CarouselImage: React.FC<{ image: string }> = ({ image }) => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -171,7 +177,17 @@ const FullscreenImage: React.FC<{ imageElement: HTMLImageElement }> = ({
         fullscreenImage.close();
       }}
     >
-      <img src={imageElement.src} alt="" ref={imageRef} />
+      <img
+        src={imageElement.src}
+        alt=""
+        ref={imageRef}
+        style={{
+          opacity: 0,
+        }}
+      />
     </div>
   );
 };
+
+// Mobile : 440x856
+// Desktop : 1320x780
