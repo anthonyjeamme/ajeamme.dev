@@ -21,7 +21,7 @@ export const ContactSection = () => {
               <br />
               Entrepreneur Individuel
               <br />
-              20 quai pierre scize - 69000 LYON, FRANCE
+              94 rue Roger Salengro, 42000 Saint-Étienne, France
               <br />
               Siret: 83166072500035
             </div>
