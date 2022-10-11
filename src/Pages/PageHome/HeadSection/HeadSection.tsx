@@ -1,6 +1,11 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Envelope, EnvelopeSimpleOpen, FilePdf } from "phosphor-react";
+import {
+  Envelope,
+  EnvelopeSimpleOpen,
+  FilePdf,
+  LinkedinLogo,
+} from "phosphor-react";
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 
@@ -28,21 +33,25 @@ export const HeadSection = () => {
               maintenables et centrées sur l'utilisateur.
             </div>
 
-            <div className={styles["buttons"]}>
-              <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
-                <button className={styles["cta"]}>
-                  <span>
-                    <EnvelopeSimpleOpen />
-                    <span>Contactez-moi</span>
-                  </span>
-                </button>
-              </ExternalLink>
-            </div>
+            <CTALine />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+const CTALine = () => (
+  <div className={styles["CTALine"]}>
+    <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
+      <button className={styles["cta"]}>
+        <span>
+          <LinkedinLogo />
+          <span>Contactez-moi</span>
+        </span>
+      </button>
+    </ExternalLink>
+  </div>
+);
 
 export default HeadSection;
