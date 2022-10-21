@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { EnvelopeSimple } from "phosphor-react";
 import { useEffect, useRef, useState } from "react";
 import { classNameModule } from "../../utils/classNameModule/classNameModule";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
@@ -16,7 +17,7 @@ export const Topbar = () => {
     const handleScroll = () => {
       if (!rootRef.current) return;
 
-      const opacity = Math.min(1, window.scrollY / 500);
+      const opacity = Math.min(1, window.scrollY / 300);
 
       rootRef.current.style.backgroundColor = `rgba(93, 107, 187, ${opacity})`;
     };
@@ -54,7 +55,10 @@ export const Topbar = () => {
             <nav>
               <a href="#competence">Compétences</a>
               <a href="#experience">Expérience</a>
-              <a href="#contact">Contact</a>
+              <a href="#qui-suis-je">Qui suis-je ?</a>
+              <a href="#contact" {...className("important")}>
+                Contactez-moi
+              </a>
             </nav>
           )}
         </div>

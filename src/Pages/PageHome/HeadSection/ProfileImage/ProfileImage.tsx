@@ -5,7 +5,25 @@ import styles from "./ProfileImage.module.scss";
 
 const ProfileImage = () => {
   const [size, setSize] = useState(getSize());
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  const preloadImage = (url: string) =>
+    new Promise((resolve) => {
+      {
+        const element = document.createElement("img");
+        element.onload = () => {
+          resolve(null);
+        };
+
+        element.src = url;
+      }
+    });
+
+  useEffect(() => {
+    preloadImage("/images/profile-picture.jpg").then(() => {
+      setIsLoaded(true);
+    });
+  }, []);
   useEffect(() => {
     const handleResize = () => {
       setSize(getSize());
@@ -30,12 +48,16 @@ const ProfileImage = () => {
 
   return (
     <div className={styles["ProfileImage"]}>
-      <Image
-        src="/images/profile-picture.jpg"
-        alt="Anthony Jeamme"
-        height={size}
-        width={size}
-      />
+      <div>
+        {isLoaded && (
+          <Image
+            src="/images/profile-picture.jpg"
+            alt="Anthony Jeamme"
+            height={size}
+            width={size}
+          />
+        )}
+      </div>
     </div>
   );
 };

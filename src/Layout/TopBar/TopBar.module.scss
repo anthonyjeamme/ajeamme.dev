@@ -1,3 +1,16 @@
+@keyframes TopbarEntry {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+
 .Topbar {
   position: fixed;
   top: 0;
@@ -7,6 +20,9 @@
   color: white;
   padding: 0 20px;
   font-size: 18px;
+  animation: TopbarEntry 500ms;
+  animation-fill-mode: both;
+  animation-delay: 500ms;
 
   .logo {
     height: 40px;
@@ -30,8 +46,64 @@
 
       & > a {
         margin-left: 40px;
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 1px;
+          background-color: white;
+          left: 0;
+          right: 0;
+          bottom: 4px;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 250ms;
+        }
+
         &:hover {
-          text-decoration: underline;
+          &::after {
+            //
+            transform: none;
+          }
+        }
+
+        &.important {
+          padding: 0 16px;
+          border-radius: 10px;
+          border: 2px solid rgba(white, 0.5);
+          color: white;
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          transition: border-color 250ms, background-color 250ms;
+
+          @media (pointer: fine) {
+            &:hover {
+              border-color: white;
+              background-color: rgba(white, 0.05);
+            }
+          }
+
+          svg {
+            margin-right: 6px;
+            display: flex;
+          }
+
+          // background-color: #e1963a;
+          // background-image: linear-gradient(
+          //   to bottom right,
+          //   transparent,
+          //   #d35731 200%
+          // );
+
+          &::after {
+            display: none;
+          }
         }
       }
     }

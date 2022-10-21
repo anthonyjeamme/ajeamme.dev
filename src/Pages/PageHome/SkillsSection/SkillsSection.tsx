@@ -26,7 +26,7 @@ export const SkillsSection = () => {
   return (
     <div {...className("SkillsSection")} id="competence">
       <HomeContainer large>
-        <SectionTitle>Compétences</SectionTitle>
+        {/* <SectionTitle>Compétences</SectionTitle> */}
 
         <div {...className("columns")}>
           <Skills />
@@ -99,8 +99,8 @@ const Arguments = () => (
 
       <p>
         Je vous aide à intégrer vos maquettes, au pixel près, responsive et à
-        perfectionner au besoin : micro contenu, micro interaction, typographie
-        etc.
+        perfectionner au besoin : UX design, UI design, icônes, micro contenu,
+        typographie etc.
       </p>
     </div>
 

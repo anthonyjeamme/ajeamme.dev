@@ -1,11 +1,5 @@
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import {
-  Envelope,
-  EnvelopeSimpleOpen,
-  FilePdf,
-  LinkedinLogo,
-} from "phosphor-react";
+import { LinkedinLogo } from "phosphor-react";
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 
@@ -33,7 +27,7 @@ export const HeadSection = () => {
               maintenables et centrées sur l'utilisateur.
             </div>
 
-            <CTALine />
+            {/* <CTALine /> */}
           </div>
         </div>
       </div>

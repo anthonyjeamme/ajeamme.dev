@@ -14,9 +14,9 @@ import styles from "./AboutSection.module.scss";
 
 export const AboutSection = () => {
   return (
-    <div className={styles["AboutSection"]}>
+    <div className={styles["AboutSection"]} id="qui-suis-je">
       <HomeContainer text>
-        <SectionTitle blueLine>À propos</SectionTitle>
+        <SectionTitle blueLine>Qui suis-je ?</SectionTitle>
 
         <ul>
           <li>

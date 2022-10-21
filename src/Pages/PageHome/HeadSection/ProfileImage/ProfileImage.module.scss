@@ -1,3 +1,24 @@
+@keyframes ProfileImageBackEntry {
+  from {
+    transform: rotate(60deg) scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(20deg) scale(0.9);
+    opacity: 1;
+  }
+}
+
+@keyframes ProfileImageImageEntry {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .ProfileImage {
   position: relative;
 
@@ -7,6 +28,9 @@
     border-radius: 300px;
     position: relative;
     z-index: 2;
+    display: block;
+
+    animation: ProfileImageImageEntry 1s;
 
     @media (max-width: 1000px) {
       height: 240px;
@@ -35,6 +59,10 @@
     bottom: 0;
     border-radius: 40px;
     transform: rotate(20deg) scale(0.9);
+
+    animation: ProfileImageBackEntry 0.5s;
+    animation-delay: 400ms;
+    animation-fill-mode: both;
 
     @media (max-width: 768px) {
       border-radius: 30px;
