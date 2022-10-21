@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1000;
   color: white;
   height: 60px;
   display: flex;
@@ -16,6 +16,7 @@
     height: 40px;
     width: 40px;
     display: flex;
+    cursor: pointer;
   }
 
   & > div > nav {

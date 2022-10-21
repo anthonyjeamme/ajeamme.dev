@@ -1,5 +1,5 @@
 .ExperienceCarousel {
-  padding: 100px 0 100px 0;
+  padding: 100px 0 40px 0;
   position: relative;
   background-color: var(--dark);
   box-sizing: border-box;
@@ -60,26 +60,6 @@
     z-index: 2;
     margin: auto;
     display: flex;
-  }
-  & > .description {
-    position: absolute;
-    z-index: 4;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    text-align: center;
-    display: flex;
-    height: 100px;
-
-    @media (max-width: 768px) {
-      height: 70px;
-    }
-
-    & > div {
-      margin: auto;
-      max-width: 500px;
-    }
   }
 }
 
@@ -237,4 +217,12 @@
     animation: FullscreenImageImgEntry 400ms;
     animation-fill-mode: both;
   }
+}
+
+.legend {
+  background-color: #1f1f33;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
 }

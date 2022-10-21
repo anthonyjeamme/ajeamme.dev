@@ -73,7 +73,6 @@ const ExperienceCarousel = () => {
         <FullscreenImage imageElement={fullscreenImageElement} />
       )}
       <div {...className("ExperienceCarousel")}>
-        {" "}
         <button
           {...className("previous-button")}
           onClick={() => {
@@ -98,9 +97,7 @@ const ExperienceCarousel = () => {
           <Mobile image={currentStep.mobileImage} />
           <Desktop image={currentStep.desktopImage} />
         </div>
-        <div {...className("description")}>
-          <div>{currentStep.description}</div>
-        </div>
+
         <div
           {...className("background-block")}
           style={{
@@ -109,6 +106,7 @@ const ExperienceCarousel = () => {
           }}
         ></div>
       </div>
+      <div {...className("legend")}>{currentStep.description}</div>
     </fullscreenImageContext.Provider>
   );
 };
