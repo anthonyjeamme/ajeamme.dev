@@ -5,10 +5,6 @@
   right: 0;
   z-index: 1000;
   color: white;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 20px;
   font-size: 18px;
 
@@ -19,15 +15,24 @@
     cursor: pointer;
   }
 
-  & > div > nav {
+  & > div {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    justify-content: space-between;
+    height: 60px;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
 
-    & > a {
-      margin-left: 40px;
-      &:hover {
-        text-decoration: underline;
+    & > div > nav {
+      display: flex;
+      align-items: center;
+
+      & > a {
+        margin-left: 40px;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
