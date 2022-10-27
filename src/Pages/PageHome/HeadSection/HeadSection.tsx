@@ -19,7 +19,8 @@ export const HeadSection = () => {
 
           <div className={styles["text"]}>
             <h1>
-              <i>Anthony jeamme</i>,<br /> développeur React
+              <i>Anthony jeamme</i>
+              <br /> développeur <b>React</b>
             </h1>
             <div className={styles["subheadline"]}>
               Je vous aide à concevoir des applications{" "}

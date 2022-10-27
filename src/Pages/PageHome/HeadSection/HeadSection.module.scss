@@ -14,7 +14,7 @@
   }
 
   .container {
-    width: 1000px;
+    width: 1300px;
     margin: 0 auto;
     max-width: 100vw;
     box-sizing: border-box;
@@ -22,7 +22,7 @@
 
   .columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     & > :not(:nth-last-child(1)) {
@@ -44,6 +44,7 @@
 
     & > .text {
       flex: 1;
+      max-width: 700px;
     }
   }
 
@@ -108,6 +109,13 @@
     i {
       font-style: normal;
       font-weight: 300;
+      font-size: 40px;
+      color: rgba(white, 0.7);
+    }
+
+    b {
+      color: #e68910;
+      font-weight: 500;
     }
   }
 
