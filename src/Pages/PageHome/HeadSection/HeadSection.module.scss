@@ -1,7 +1,7 @@
 .HeadSection {
   padding: 260px 0 200px 0;
-  background-image: linear-gradient(to top, transparent, rgba(#262d4d, 0.7)),
-    linear-gradient(to top left, rgba(211, 87, 49, 0.5), transparent);
+  background-image: linear-gradient(to top, transparent, rgba(#262d4d, 0.8)),
+    linear-gradient(to top left, rgba(211, 87, 49, 0.4), transparent);
   background-color: #5d6bbb;
   color: white;
 
@@ -140,6 +140,24 @@
 .CTALine {
   display: flex;
   margin-top: 30px;
+  width: 100%;
+
+  button {
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .secondary {
+    background-color: transparent;
+    color: white;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -158,6 +176,7 @@
     font: inherit;
     border: 0;
     font-size: 20px;
+    font-size: 18px;
     position: relative;
     background-color: transparent;
     font-weight: 400;
@@ -182,12 +201,15 @@
 
     & > span {
       padding: 0 30px;
-      background-color: #e1963a;
-      background-image: linear-gradient(
-        to bottom right,
-        transparent,
-        #d35731 200%
-      );
+      background-color: #d35731;
+      background-color: #d46442;
+      background-color: #e68910;
+      // background-color: #5d6bbb;
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   transparent,
+      //   #d35731 200%
+      // );
       height: 50px;
       display: flex;
       justify-content: center;

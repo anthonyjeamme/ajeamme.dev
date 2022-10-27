@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { LinkedinLogo } from "phosphor-react";
+import { Briefcase, LinkedinLogo } from "phosphor-react";
 import React from "react";
 import { ExternalLink } from "../../../utils/ExternalLink/ExternalLink";
 
@@ -27,7 +27,7 @@ export const HeadSection = () => {
               maintenables et centrées sur l'utilisateur.
             </div>
 
-            {/* <CTALine /> */}
+            <CTALine />
           </div>
         </div>
       </div>
@@ -37,14 +37,17 @@ export const HeadSection = () => {
 
 const CTALine = () => (
   <div className={styles["CTALine"]}>
-    <ExternalLink href="https://www.linkedin.com/in/anthonyjeamme/">
+    <a href="#experience">
       <button className={styles["cta"]}>
         <span>
-          <LinkedinLogo />
-          <span>Contactez-moi</span>
+          <Briefcase />
+          <span>Mon travail</span>
         </span>
       </button>
-    </ExternalLink>
+    </a>
+    <a href="#qui-suis-je">
+      <button className={styles["secondary"]}>En savoir plus</button>
+    </a>
   </div>
 );
 
