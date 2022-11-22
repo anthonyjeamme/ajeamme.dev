@@ -46,9 +46,6 @@ const CTALine = () => (
         </span>
       </button>
     </a>
-    <a href="#qui-suis-je">
-      <button className={styles["secondary"]}>En savoir plus</button>
-    </a>
   </div>
 );
 
