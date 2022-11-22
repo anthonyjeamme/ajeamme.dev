@@ -20,6 +20,7 @@ import MongoDBIcon from "../../../components/Icons/MongoDBIcon";
 
 import { classNameModule } from "../../../utils/classNameModule/classNameModule";
 import styles from "./SkillsSection.module.scss";
+import NXIcon from "../../../components/Icons/NXIcon";
 const className = classNameModule(styles);
 
 export const SkillsSection = () => {
@@ -45,6 +46,10 @@ const Skills = () => (
 
     <div {...className("stack")}>
       <div {...className("item")}>
+        <NXIcon />
+        <div>NX</div>
+      </div>
+      <div {...className("item")}>
         <ReactIcon />
         <div>React.js</div>
       </div>
@@ -52,6 +57,7 @@ const Skills = () => (
         <NextJSIcon />
         <div>Next.js</div>
       </div>
+
       <div {...className("item")}>
         <SASSIcon />
         <div>SASS</div>
@@ -60,10 +66,6 @@ const Skills = () => (
       <div {...className("item")}>
         <AWSLambdaIcon />
         <div>Functions</div>
-      </div>
-      <div {...className("item")}>
-        <NetlifyIcon />
-        <div>Netlify</div>
       </div>
       <div {...className("item")}>
         <MongoDBIcon />
